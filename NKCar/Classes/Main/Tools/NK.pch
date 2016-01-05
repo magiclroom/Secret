@@ -1,0 +1,111 @@
+
+#ifndef ______PrefixHeader_pch
+#define ______PrefixHeader_pch
+/*** 如果希望某些内容能拷贝到任何源代码文件(OC\C\C++等), 那么就不要写在#ifdef __OBJC__和#endif之间 ***/
+
+
+/***** 在#ifdef __OBJC__和#endif之间的内容, 只会拷贝到OC源代码文件中, 不会拷贝到其他语言的源代码文件中 *****/
+#ifdef __OBJC__
+
+
+/*** 引用 ***/
+#import "UIView+NKExtension.h"
+#import "UIImage+NKExtension.h"
+#import "NSString+NKExtension.h"
+#import "Masonry.h"
+
+/**** 调用的方法****/
+#define NKFunc NKLog(@"%s",__func__)
+
+
+//前缀
+#define Prefix NK
+
+//获取应用程序启动时的图片URL
+#define NKGetLunchPic @"http://mi.xcar.com.cn/interface/xcarapp/getLaunchPic_xcar.php"
+
+
+
+//获取首页新闻列表 参数说明 limit:每次刷新的数量   offset:偏移量   type:新闻的类型 ver:版本信息 该参数传不传没影响
+//eg.http://a.xcar.com.cn/interface/6.0/getNewsList.php?limit=10&offset=0&type=1&ver=6.2.2
+#define NKGetNewsList  @"http://a.xcar.com.cn/interface/6.0/getNewsList.php"
+
+//http://a.xcar.com.cn/interface/6.0/getImgCommentList.php?action=getlist&limit=20&newsid=1872366&page=1
+#define NKGetCommetsList @"http://a.xcar.com.cn/interface/6.0/getImgCommentList.php"
+
+/** type = 144998 (视频) */
+#define NKGetVideoList @"http://mi.xcar.com.cn/interface/xcarapp/getdingyue.php"
+
+/** 精选 */
+//http://mi.xcar.com.cn/interface/xcarapp/getSelectedPostList.php?limit=20&offset=0&ver=6.2.2
+#define NKGetSelectionList @"http://mi.xcar.com.cn/interface/xcarapp/getSelectedPostList.php"
+
+/* 热帖*/
+/*   http://my.xcar.com.cn/app/6/getHotPostList.php?limit=20&offset=0&ver=6.2.2 */
+#define NKHotPostList  @"http://my.xcar.com.cn/app/6/getHotPostList.php"
+
+/* 帖子详情*/
+//http://mi.xcar.com.cn/interface/xcarapp/getPostInfo.php?tid=22634801
+#define  NKGetPostInfo @"http://mi.xcar.com.cn/interface/xcarapp/getPostInfo.php"
+
+//http://a.xcar.com.cn/interface/6.0/bbs_detail.php?tid=22634116&themeType=white&network=wifi&deviceType=iOS&type=0&p=2&version=6.2.3&fontSize=normal&cityId=347
+//其中主要参数是tid是帖子编号 type =0的话是看所有的帖子 type = 1是只看楼主  其他参数略
+#define NKGetPostDetails @"http://a.xcar.com.cn/interface/6.0/bbs_detail.php"
+
+/** 获取所有车品牌 */
+#define NKGetAllCarBrands @"http://mi.xcar.com.cn/interface/xcarapp/getBrands.php"
+
+/**  各车品牌的车型 */
+// 参数：brandId 1 = Audi 56 = Aston Martin
+#define NKGetCarSubBrands @"http://mi.xcar.com.cn/interface/xcarapp/getSeriesByBrandId.php"
+
+//汽车品牌页获取汽车的优惠信息
+#define NKGetCarSales @"http://mi.xcar.com.cn/interface/xcarapp/getSpecialSale.php"
+
+//降价获取这折扣信息 http://mi.xcar.com.cn/interface/xcarapp/getDiscountList.php?brandId=0&cityId=347&provinceId=30&seriesId=0&sortType=1
+#define NKGetDiscountList  @"http://mi.xcar.com.cn/interface/xcarapp/getDiscountList.php"
+//获取活动列表http://a.xcar.com.cn/interface/6.0/getEventList.php
+#define NKGetEventList @"http://a.xcar.com.cn/interface/6.0/getEventList.php"
+
+
+#define LIMIT @"limit"
+#define OFFSET @"offset"
+#define TYPE @"type"
+#define VERSION @"ver"
+#define NewsCount 30
+
+
+#define VersionKey @"VersionKey"
+
+/** 输出*/
+#ifdef DEBUG
+#define NKLog(...) NSLog(__VA_ARGS__)
+#else
+#define NKLog(...)
+#endif
+
+/** 数据存储*/
+#define NKUserDefaults [NSUserDefaults standardUserDefaults]
+#define NKCacheDir [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
+#define NKDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+#define NKTempDir NSTemporaryDirectory()
+
+/** 颜色*/
+#define NKRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define NKRGBAColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#define NKRGB16Color(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define NKBlueColor [UIColor colorWithRed:100 / 255.0 green:200 / 255.0 blue:237 / 255.0 alpha:1.0]
+
+/** 获取硬件信息*/
+#define NKSCREEN_W [UIScreen mainScreen].bounds.size.width
+#define NKSCREEN_H [UIScreen mainScreen].bounds.size.height
+#define NKCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
+#define NKCurrentSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+
+
+
+
+#endif
+/***** 在#ifdef __OBJC__和#endif之间的内容, 只会拷贝到OC源代码文件中, 不会拷贝到其他语言的源代码文件中 *****/
+
+#endif

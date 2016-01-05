@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gt0-mz-WXA">
+                                <rect key="frame" x="138" y="257" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMs-Pa-5U0">
+                                <rect key="frame" x="0.0" y="570" width="193" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Iui-Tt-5Kf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Di-XS-ehB">
+                                <rect key="frame" x="193" y="570" width="194" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="25s-KK-85J"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDJ-l7-8go">
+                                <rect key="frame" x="387" y="570" width="193" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pt0-iX-gbr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bDJ-l7-8go" firstAttribute="leading" secondItem="5Di-XS-ehB" secondAttribute="trailing" id="3i0-3j-vIX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dMs-Pa-5U0" secondAttribute="bottom" id="4ni-Ax-h1i"/>
+                            <constraint firstItem="5Di-XS-ehB" firstAttribute="leading" secondItem="dMs-Pa-5U0" secondAttribute="trailing" id="Iwc-uk-YEA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bDJ-l7-8go" secondAttribute="bottom" id="Jww-xb-kH2"/>
+                            <constraint firstItem="dMs-Pa-5U0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QAI-rh-GY1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bDJ-l7-8go" secondAttribute="trailing" id="S8e-05-De2"/>
+                            <constraint firstItem="bDJ-l7-8go" firstAttribute="width" secondItem="dMs-Pa-5U0" secondAttribute="width" id="fey-IA-Kpn"/>
+                            <constraint firstItem="5Di-XS-ehB" firstAttribute="width" secondItem="dMs-Pa-5U0" secondAttribute="width" id="gvf-bf-JOR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Di-XS-ehB" secondAttribute="bottom" id="vdz-SX-P6b"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gt0-mz-WXA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-219"/>
+        </scene>
+    </scenes>
+</document>

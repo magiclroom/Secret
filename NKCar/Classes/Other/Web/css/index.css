@@ -1,0 +1,54 @@
+/*距离顶部...*/
+body{
+    padding-top: 50px;
+}
+
+
+#main{
+   margin: 40px;
+}
+
+#main .container-fluid{
+    text-align: center;
+}
+
+#main .container-fluid .row .col-md-4{
+    margin-bottom: 10px;
+}
+
+#main .container-fluid .row .col-md-4 img{
+    width: 150px;
+}
+
+#main .container-fluid .row  .col-md-4  p{
+    text-align: left;
+    text-indent: 8%;
+}
+
+
+/*tab选项卡*/
+
+#tab{
+    margin-top: 70px;
+}
+
+#tab .tab-content p{
+    text-align: left;
+}
+
+#tab .tab-content .container-fluid .row .col-md-7{
+    margin-top: 100px;
+}
+
+/* 底部 */
+#footer{
+    padding-bottom: 50px;
+}
+
+/* 自适应布局 */
+@media screen and (max-width: 1071px) {
+    #tab .tab-content .container-fluid .row .col-md-7{
+        margin-top: 30px;
+    }
+
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>NK Car</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+<!--导航-->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">NK Car</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">简介 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">综述</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">部门 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">前端</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">移动端</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">后台</a></li>
+
+                    </ul>
+                </li>
+                 <!--
+                    data-toggle="modal" 以模态的方式弹出  data-target="#aboutXmg" 根据ID调用模态框
+                 -->
+                <li><a href="#"  data-toggle="modal" data-target="#aboutXmg">关于</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!--滚动图-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- 底部的点 -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- 中间主要内容 -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="title1.jpg" alt="标题1">
+            <!--
+               可以在这个里面增加你们要添加的样式
+            -->
+            <!--<div class="carousel-caption">-->
+                <!--<button class="btn btn-success">哈哈哈</button>-->
+            <!--</div>-->
+        </div>
+        <div class="item">
+             <img src="title2.jpg" alt="标题2">
+        </div>
+        <div class="item">
+             <img src="title3.jpg" alt="标题3">
+        </div>
+    </div>
+
+    <!-- 控制 -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon " aria-hidden="true"></span>
+        <span class="sr-only">上一张</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon " aria-hidden="true"></span>
+        <span class="sr-only">下一张</span>
+    </a>
+</div>
+
+<!--主要内容-->
+<div id="main">
+     <!--中间的三大内容-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="chebiao1.png">
+                <h2>宝马</h2>
+                <p>宝马汽车为德系三大豪华品牌之一，宝马的车系有1、2、3、4、5、6、7、i、X、Z、I等几个系列，还有在各系基础上进行改进的M系（宝马官方的高性能改装部门）。</p>
+                <button class="btn btn-danger">立即咨询</button>
+            </div>
+            <div class="col-md-4">
+                <!--
+                    class="img-circle"  设置图片的显示样式  圆形,自适应.....
+                -->
+                <img src="chebiao2.png" class="img-circle">
+                <h2>大众</h2>
+                <p>大众汽车（德语：Volkswagen）是一家总部位于德国沃尔夫斯堡的汽车制造公司，也是世界四大汽车生产商之一的大众集团的核心企业</p>
+                <button class="btn btn-danger">立即咨询</button>
+            </div>
+            <div class="col-md-4">
+                <img src="chebiao3.png">
+                <h2>奔驰</h2>
+                <p>梅赛德斯-奔驰（Mercedes-Benz）是世界著名的德国汽车品牌。梅赛德斯-奔驰为戴姆勒集团旗下公司,被誉为汽车的发明者。</p>
+                <button class="btn btn-danger">立即咨询</button>
+            </div>
+        </div>
+    </div>
+
+    <!--tab切换-->
+    <div id="tab">
+        <!-- 选项卡的头部 -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#iOS" aria-controls="home" role="tab" data-toggle="tab">宝马</a></li>
+            <li role="presentation"><a href="#java" aria-controls="profile" role="tab" data-toggle="tab">大众</a></li>
+            <li role="presentation"><a href="#ui" aria-controls="messages" role="tab" data-toggle="tab">奔驰</a></li>
+        </ul>
+
+        <!-- 选项卡的中间内容 -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="iOS">
+                <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <!--
+                                    class="text-muted"  设置文字的样式,属性有很多种,建议自己写
+                                -->
+                                <h1>宝马<span class="text-muted">BMW</span></h1>
+                                <p class="lead">BMW的蓝白标志宝马总部所在地巴伐利亚州州旗的颜色。百年来，宝马汽车由最初的一家飞机引擎生产厂发展成为以高级轿车为主导，并生产享誉全球的飞机引擎、越野车和摩托车的企业集团，名列世界汽车公司前列。宝马也被译为“巴依尔”。</p>
+                        </div>
+                        <div class="col-md-5">
+                            <!--
+                               img-responsive  让图片自适应显示,可跟随屏幕的宽度和高度自动改变比例
+                            -->
+                            <img src="chebiao1.png" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="java">
+
+                <!--
+                   container-fluid 自适应显示
+                   container  固定显示
+
+                -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5"> <img src="chebiao2.png" class="img-responsive"></div>
+                        <div class="col-md-7">
+                            <h1>大众<span class="text-muted">Das Auto</span></h1>
+                            <p class="lead">大众汽车公司意为大众使用的汽车。标志是由三个用中指和食指作出的“V”组成，表示大众公司及其产品必胜－必胜－必胜。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="ui">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h1>奔驰<span class="text-muted">Mercedes-Benz</span></h1>
+                            <p class="lead">以梅赛德斯-奔驰命名的汽车，以高质量、高性能的汽车产品闻名于世。除了高档豪华轿车外，奔驰公司还是世界上最著名的大客车和重型载重汽车的生产厂家。</p>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="chebiao3.png" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+<!--底部分割线条-->
+  <hr>
+<!--底部-->
+  <footer id="footer">
+       <p class="pull-right"><a href="#">回到顶部</a></p>
+       <p>&copy; 2015 NK Car</p>
+  </footer>
+
+<!--modal 框-->
+<div class="modal fade" id="aboutXmg" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">NK Car</h4>
+            </div>
+            <div class="modal-body">
+                <p>跑车的英文名是SportsCar或SportyCar，属于一种低底盘、线条流畅、动力突出的汽车类型，其最大特点是不断追求速度极限。跑车的分类有很多种，按车身结构可分为轿跑、敞篷跑车、双门跑车等，按价值可分为平民跑车、豪华跑车、超级跑车等。</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">买不起</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="jquery-1.11.3.min.js"></script>
+<script src="bootstrap.min.js"></script>
+</body>
+</html>
